@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+   table{
+    width:200px;
+    height:100px;
+    border-collapse: collapse;   
+   }
+   td{
+    width: 200px;
+    height:100px;
+    border: 1px solid black;
+    text-align: center;
+   }
+   </style>
+</head>
+<body>
+    <center>
+    <table class="changecolors">
+        <tr>
+            <td id="1">A</td>
+            <td id="2">B</td>
+        </tr>
+        <tr>
+            <td id="3">C</td>
+            <td id="4">D</td>
+        </tr>
+    </table>
+    <button onclick="changecolor()">Button</button>
+    </center>
+
+    <script>
+        function changecolor(){
+            <!-- document.getElementById("1").style.backgroundColor = "green";
+                document.getElementById("3").style.backgroundColor = "blue";
+                document.getElementById("2").style.backgroundColor="pink";
+                document.getElementById("4").style.backgroundColor="yellow";
+                 -->
+
+                 //another way 
+
+              const a=["red","green","pink","yellow"];
+
+              const cell=document.querySelectorAll(".changecolors td");
+
+              for(let i=0;i<cell.length;i++){
+                cell[i].style.backgroundColor=a[i];
+              }
+
+
+        }
+    </script>
+</body>
+</html>
